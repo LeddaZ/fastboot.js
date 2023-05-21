@@ -239,10 +239,10 @@ export async function flashZip(
     );
 
     // Cancel snapshot update if in progress
-    let snapshotStatus = await device.getVariable("snapshot-update-status");
+    /* let snapshotStatus = await device.getVariable("snapshot-update-status");
     if (snapshotStatus !== null && snapshotStatus !== "none") {
         await device.runCommand("snapshot-update:cancel");
-    }
+    } */
 
     // Load nested images for the following steps
     common.logDebug("Loading nested images from zip");
